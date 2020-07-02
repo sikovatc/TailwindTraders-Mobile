@@ -11,9 +11,6 @@ using TouchTracking.iOS;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 
 [assembly: ResolutionGroupName(nameof(TailwindTraders))]
 
@@ -24,7 +21,6 @@ namespace TailwindTraders.Mobile.IOS
     {
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
-            AppCenter.Start("c25e1a82-5b08-47ba-92c4-6adaa87b4e65", typeof(Analytics), typeof(Crashes));
             InitRenderersAndServices();
 
             Forms.SetFlags(new[] { "CollectionView_Experimental", "Shell_Experimental", "Visual_Experimental" });
