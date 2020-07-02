@@ -11,6 +11,9 @@ using TailwindTraders.Mobile.Droid.Helpers;
 using TailwindTraders.Mobile.Features.Scanning;
 using TailwindTraders.Mobile.Features.Scanning.Photo;
 using Xamarin.Forms;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace TailwindTraders.Mobile.Droid
 {
@@ -23,6 +26,8 @@ namespace TailwindTraders.Mobile.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AppCenter.Start("f3ac80a2-7d2b-4a7f-b20f-4b29e5f0183c",
+                   typeof(Analytics), typeof(Crashes));
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
