@@ -25,8 +25,7 @@ namespace TailwindTraders.Mobile.IOS
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             AppCenter.Start("c25e1a82-5b08-47ba-92c4-6adaa87b4e65", typeof(Analytics), typeof(Crashes));
-    
-            //Crashes.GenerateTestCrash();
+            Crashes.GenerateTestCrash();
             InitRenderersAndServices();
 
             Forms.SetFlags(new[] { "CollectionView_Experimental", "Shell_Experimental", "Visual_Experimental" });
