@@ -28,6 +28,7 @@ namespace TailwindTraders.Mobile.Droid
         {
             AppCenter.Start("f3ac80a2-7d2b-4a7f-b20f-4b29e5f0183c",
                    typeof(Analytics), typeof(Crashes));
+            Crashes.GenerateTestCrash();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
